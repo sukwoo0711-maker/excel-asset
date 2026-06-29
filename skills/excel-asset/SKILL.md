@@ -1,0 +1,33 @@
+---
+name: excel-asset
+description: Work with spreadsheet-derived knowledge assets in a neutral intranet repository. Use for converting approved spreadsheets or SQLite databases into local-only generated assets while keeping source data and generated outputs out of Git.
+---
+
+# Spreadsheet Asset Workflow
+
+Use this skill for neutral, offline-friendly spreadsheet knowledge work.
+
+## Boundaries
+
+- Keep raw spreadsheets in `data/` or another ignored local folder.
+- Keep generated databases, Markdown exports, indexes, and reports in ignored folders.
+- Do not commit real business documents or generated vaults.
+- If sensitive data may appear, run a masking step before export or indexing.
+
+## SQLite To Markdown
+
+```powershell
+python .\sqlite_to_obsidian.py .\data\input.db .\build\markdown-export --clean
+```
+
+## Consistency Check
+
+```powershell
+python .\auto_grill.py scan --paths docs skills
+```
+
+## Review Requirements
+
+- Verify generated output before sharing.
+- Keep traceability to source files, rows, or line numbers.
+- Treat all LLM-generated summaries as draft material until reviewed.

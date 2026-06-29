@@ -1,0 +1,8 @@
+# Runtime dependencies are intentionally minimal for restricted intranet use.
+# The default tools use only the Python standard library.
+
+# Optional: install internally if you enable spreadsheet parsing or local RAG.
+# openpyxl
+# chromadb
+# presidio-analyzer
+# presidio-anonymizer

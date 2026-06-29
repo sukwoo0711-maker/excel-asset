@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local inputs and generated outputs
+data/
+build/
+exports/
+reports/
+logs/
+*.log
+
+# Generated databases and search indexes
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+*_chroma/
+meili_data/
+meilisearch.exe
+
+# Office lock files and local workbooks
+~$*
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+*.tsv
+
+# Generated document vaults and pasted assets
+obsidian-vault/
+wiki/
+*_wiki/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+
+# Local model and environment files
+Modelfile*
+modelfiles/
+.env
+.venv/
+venv/
